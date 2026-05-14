@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>BrainCash Dashboard</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+
+    <h1>🧠 BrainCash</h1>
+
+    <div class="coins-box">
+      💰 Coins: <span id="coins">250</span>
+    </div>
+
+  </div>
+
+
+  <!-- WELCOME -->
+  <section class="welcome-section">
+
+    <h2>
+      Welcome Back 👋
+    </h2>
+
+    <p>
+      Answer quizzes, earn coins and climb the leaderboard.
+    </p>
+
+  </section>
+
+
+  <!-- QUIZ CARDS -->
+  <section class="quiz-section">
+
+    <div class="quiz-card">
+      <img
+        src="https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1200&auto=format&fit=crop"
+        alt="General Knowledge"
+      >
+
+      <h3>General Knowledge</h3>
+
+      <p>
+        Test your brain with exciting questions.
+      </p>
+
+<button class="playBtn" onclick="window.location.href='quiz.html'">
+  Play Quiz
+</button>
+    </div>
+
+
+
+    <div class="quiz-card">
+      <img
+        src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1200&auto=format&fit=crop"
+        alt="Science Quiz"
+      >
+
+      <h3>Science Quiz</h3>
+
+      <p>
+        Explore science and earn more coins.
+      </p>
+
+  <button class="playBtn" onclick="window.location.href='quiz.html'">
+  Play Quiz
+</button>
+    </div>
+
+
+
+    <div class="quiz-card">
+      <img
+        src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1200&auto=format&fit=crop"
+        alt="History Quiz"
+      >
+
+      <h3>History Quiz</h3>
+
+      <p>
+        Challenge yourself with history questions.
+      </p>
+
+ <button class="playBtn" onclick="window.location.href='quiz.html'">
+  Play Quiz
+</button>
+    </div>
+
+  </section>
+
+
+
+  <!-- DAILY BONUS -->
+  <section class="bonus-section">
+
+    <h2>🎁 Daily Bonus</h2>
+
+    <p>
+      Claim your free coins every day.
+    </p>
+
+    <button id="bonusBtn">
+      Claim Bonus
+    </button>
+
+  </section>
+
+
+
+  <!-- FOOTER -->
+  <footer>
+    <p>
+      © 2026 BrainCash Dashboard
+    </p>
+  </footer>
+
+
+  <script>
+
+    let coins = 250;
+
+    const bonusBtn = document.getElementById("bonusBtn");
+    const coinsText = document.getElementById("coins");
+
+    bonusBtn.addEventListener("click", () => {
+
+      coins += 50;
+
+      coinsText.innerText = coins;
+
+      alert("You received 50 coins 🎉");
+
+    });
+
+  </script>
+
+</body>
+</html>

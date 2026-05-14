@@ -1,0 +1,315 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Poppins', sans-serif;
+  background:#0f172a;
+  color:white;
+}
+
+/* NAVBAR */
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 8%;
+  background:#111827;
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+
+.logo{
+  font-size:24px;
+  font-weight:700;
+  color:#38bdf8;
+}
+
+.nav-links{
+  display:flex;
+  list-style:none;
+  gap:20px;
+}
+
+.nav-links a{
+  text-decoration:none;
+  color:white;
+  transition:0.3s;
+}
+
+.nav-links a:hover{
+  color:#38bdf8;
+}
+
+/* HERO */
+.hero{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:80px 8%;
+  gap:40px;
+  flex-wrap:wrap;
+}
+
+.hero-text{
+  flex:1;
+  min-width:280px;
+}
+
+.hero-text h1{
+  font-size:52px;
+  line-height:1.2;
+  margin-bottom:20px;
+}
+
+.hero-text p{
+  font-size:18px;
+  color:#cbd5e1;
+  margin-bottom:30px;
+  line-height:1.7;
+}
+
+button{
+  padding:15px 35px;
+  border:none;
+  border-radius:14px;
+  background:#38bdf8;
+  color:white;
+  font-size:18px;
+  cursor:pointer;
+  transition:0.3s;
+  font-weight:600;
+}
+
+button:hover{
+  background:#0ea5e9;
+  transform:scale(1.05);
+}
+
+.hero-image-container{
+  flex:1;
+  text-align:center;
+  min-width:280px;
+}
+
+.hero-image{
+  width:100%;
+  max-width:500px;
+  border-radius:25px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* FEATURES */
+.features{
+  padding:80px 8%;
+  background:#111827;
+}
+
+.features h2{
+  text-align:center;
+  font-size:40px;
+  margin-bottom:50px;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+}
+
+.card{
+  background:#1e293b;
+  padding:30px;
+  border-radius:20px;
+  text-align:center;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+}
+
+.card img{
+  width:80px;
+  margin-bottom:20px;
+}
+
+.card h3{
+  margin-bottom:15px;
+  font-size:24px;
+}
+
+.card p{
+  color:#cbd5e1;
+  line-height:1.6;
+}
+
+/* ABOUT */
+.about{
+  padding:80px 8%;
+  text-align:center;
+}
+
+.about h2{
+  font-size:40px;
+  margin-bottom:20px;
+}
+
+.about p{
+  max-width:800px;
+  margin:auto;
+  line-height:1.8;
+  color:#cbd5e1;
+  font-size:18px;
+}
+
+/* FOOTER */
+footer{
+  padding:25px;
+  background:#111827;
+  text-align:center;
+  color:#94a3b8;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+  .hero-text h1{
+    font-size:38px;
+  }
+
+  .navbar{
+    flex-direction:column;
+    gap:15px;
+  }
+
+  .nav-links{
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+}/* DASHBOARD */
+
+.topbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 8%;
+  background:#111827;
+  flex-wrap:wrap;
+  gap:15px;
+}
+
+.coins-box{
+  background:#38bdf8;
+  padding:12px 20px;
+  border-radius:14px;
+  font-weight:600;
+}
+
+.welcome-section{
+  text-align:center;
+  padding:60px 8%;
+}
+
+.welcome-section h2{
+  font-size:40px;
+  margin-bottom:15px;
+}
+
+.welcome-section p{
+  color:#cbd5e1;
+  font-size:18px;
+}
+
+.quiz-section{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:25px;
+  padding:40px 8%;
+}
+
+.quiz-card{
+  background:#1e293b;
+  border-radius:20px;
+  overflow:hidden;
+  transition:0.3s;
+}
+
+.quiz-card:hover{
+  transform:translateY(-10px);
+}
+
+.quiz-card img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+}
+
+.quiz-card h3{
+  padding:20px 20px 10px;
+}
+
+.quiz-card p{
+  padding:0 20px 20px;
+  color:#cbd5e1;
+}
+
+.quiz-card button{
+  margin:0 20px 25px;
+}
+
+.bonus-section{
+  text-align:center;
+  padding:80px 8%;
+}
+
+.bonus-section h2{
+  font-size:40px;
+  margin-bottom:15px;
+}
+
+.bonus-section p{
+  color:#cbd5e1;
+  margin-bottom:25px;
+}/* QUIZ PAGE */
+
+.quiz-container{
+  padding:60px 8%;
+  text-align:center;
+}
+
+.quiz-container h1{
+  margin-bottom:40px;
+}
+
+.question-box{
+  background:#1e293b;
+  padding:40px;
+  border-radius:20px;
+  max-width:700px;
+  margin:auto;
+}
+
+.question-box h2{
+  margin-bottom:30px;
+  line-height:1.5;
+}
+
+.answers{
+  display:grid;
+  gap:20px;
+}
+
+.answerBtn{
+  width:100%;
+}
+
+.score-box{
+  margin-top:30px;
+  font-size:24px;
+  font-weight:600;
+}

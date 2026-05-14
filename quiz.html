@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>BrainCash Quiz</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="quiz-container">
+
+    <h1>🧠 BrainCash Quiz</h1>
+
+    <div class="question-box">
+
+      <h2 id="question">
+        Loading question...
+      </h2>
+
+      <div class="answers">
+
+        <button class="answerBtn">Answer 1</button>
+        <button class="answerBtn">Answer 2</button>
+        <button class="answerBtn">Answer 3</button>
+        <button class="answerBtn">Answer 4</button>
+
+      </div>
+
+    </div>
+
+    <div class="score-box">
+      Score: <span id="score">0</span>
+    </div>
+
+  </div>
+
+
+
+
+  <script>
+
+    const questions = [
+
+      {
+        question: "What is the capital city of Kenya?",
+        answers: ["Nairobi", "Mombasa", "Kisumu", "Nakuru"],
+        correct: "Nairobi"
+      },
+
+      {
+        question: "Which planet is known as the Red Planet?",
+        answers: ["Mars", "Earth", "Venus", "Jupiter"],
+        correct: "Mars"
+      },
+
+      {
+        question: "How many days are in one week?",
+        answers: ["5", "6", "7", "8"],
+        correct: "7"
+      }
+
+    ];
+
+
+    let currentQuestion = 0;
+    let score = 0;
+
+    const questionText = document.getElementById("question");
+    const answerButtons = document.querySelectorAll(".answerBtn");
+    const scoreText = document.getElementById("score");
+
+
+    function loadQuestion(){
+
+      const q = questions[currentQuestion];
+
+      questionText.innerText = q.question;
+
+      answerButtons.forEach((button, index) => {
+
+        button.innerText = q.answers[index];
+
+        button.onclick = () => {
+
+          if(button.innerText === q.correct){
+
+            score += 10;
+
+            alert("Correct Answer 🎉");
+
+          }else{
+
+            alert("Wrong Answer ❌");
+
+          }
+
+          scoreText.innerText = score;
+
+          currentQuestion++;
+
+          if(currentQuestion < questions.length){
+
+            loadQuestion();
+
+          }else{
+
+            questionText.innerText = "Quiz Finished 🎉";
+
+            document.querySelector(".answers").style.display = "none";
+
+          }
+
+        };
+
+      });
+
+    }
+
+    loadQuestion();
+
+  </script>
+
+</body>
+</html>
